@@ -1,0 +1,36 @@
+name: Install Aidoku CLI
+description: Install the Aidoku CLI at the revision pinned for this registry.
+
+inputs:
+  revision:
+    description: aidoku-rs commit to build the CLI from.
+    required: false
+    default: ae6485e3
+
+runs:
+  using: composite
+  steps:
+    - name: Cache Aidoku CLI
+      uses: actions/cache@v4
+      with:
+        path: ~/.local/aidoku-cli
+        key: aidoku-cli-${{ runner.os }}-${{ inputs.revision }}
+
+    - name: Add Aidoku CLI to PATH
+      shell: bash
+      run: echo "$HOME/.local/aidoku-cli/bin" >> "$GITHUB_PATH"
+
+    - name: Install Aidoku CLI
+      shell: bash
+      env:
+        AIDOKU_REVISION: ${{ inputs.revision }}
+      run: |
+        set -euo pipefail
+
+        if [[ ! -x "$HOME/.local/aidoku-cli/bin/aidoku" ]]; then
+          cargo install \
+            --git https://github.com/Aidoku/aidoku-rs \
+            --rev "$AIDOKU_REVISION" \
+            --root "$HOME/.local/aidoku-cli" \
+            aidoku-cli
+        fi

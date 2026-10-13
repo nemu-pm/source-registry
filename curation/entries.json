@@ -1,0 +1,29 @@
+{
+	"$comment": "One record per source in this directory. scripts/check-curation.sh fails CI when a built package differs from its record. payloadSha256 is the SHA-256 of Payload/main.wasm inside the .aix (the zip itself embeds build timestamps, so its hash is not stable). contentLicense (SPDX-style) is copied into the published index entry by scripts/build.sh; Aidoku parsers ignore unknown fields.",
+	"entries": [
+		{
+			"id": "multi.peppercarrot",
+			"name": "Pepper&Carrot",
+			"sourceLicence": "MIT OR Apache-2.0 (the Rust source in this repository)",
+			"content": {
+				"work": "Pepper&Carrot webcomic, episodes 1-39 (the 'episodes.json' list published by the author)",
+				"licensor": "David Revoy",
+				"licence": "CC-BY-4.0",
+				"licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+				"basis": "The author's licence page states that comics, translations and artworks are licensed under Creative Commons Attribution 4.0 International, and the official API documentation offers the episode images for reuse under CC BY (https://www.peppercarrot.com/en/license/index.html, https://www.peppercarrot.com/ld/documentation/130_API.html). Not covered: the separate MiniFantasyTheater strips (CC BY-SA 4.0) and fan-art, neither of which the source lists.",
+				"restrictions": "The author's licence notice states 'AI derivation prohibited'. The source only reads the episodes; it does not train or derive anything.",
+				"note": "CC BY 4.0, shown unmodified with per-language attribution. On 2026-10-08 the author published a statement (https://www.davidrevoy.com/article1178/license-update-ai-derivation-prohibited-on-all-my-art-lore-stories-and-comics) prohibiting AI-generated derivative works while tolerating AI for grammar, proofreading and translation. nemu never generates derivatives; its learning features (OCR, explanation) are reading aids the user starts. The entry is removed if the author objects. Verified 2026-10-12."
+			},
+			"attribution": "Pepper&Carrot by David Revoy, https://www.peppercarrot.com, CC BY 4.0. Translators are credited per language (chapter scanlators) and on each episode's credits page.",
+			"dataSource": "https://www.peppercarrot.com/0_sources/episodes.json (episode list) and https://www.peppercarrot.com/0_sources/langs.json (translator credits); images from the same 0_sources tree",
+			"verifiedAt": "2026-10-12",
+			"version": 1,
+			"package": {
+				"file": "multi.peppercarrot-v1.aix",
+				"payloadSha256": "0c18d365a0dd07b777dc875278c2f7da28498b922631de34b9ae7364b374353c",
+				"toolchain": "rustc 1.98.0, aidoku-rs ae6485e3, wasm32-unknown-unknown"
+			},
+			"contentLicense": "CC-BY-4.0"
+		}
+	]
+}

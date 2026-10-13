@@ -1,0 +1,7 @@
+# Pinned so the published .aix is rebuilt from the same compiler every time;
+# the SHA-256 recorded in curation/entries.json depends on it.
+[toolchain]
+channel = "1.98.0"
+targets = ["wasm32-unknown-unknown"]
+components = ["clippy", "rustfmt"]
+profile = "minimal"

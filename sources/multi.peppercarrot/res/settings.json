@@ -1,0 +1,37 @@
+[
+	{
+		"type": "group",
+		"title": "Reading",
+		"footer": "Pepper&Carrot is published in many languages. Pick the ones whose episodes should be listed. Low quality pages are about 1200 px wide; high quality pages are about 2500 px wide and several times larger.",
+		"items": [
+			{
+				"type": "multi-select",
+				"key": "languages",
+				"title": "Languages",
+				"values": ["en", "ja", "zh", "fr", "de", "es", "it", "pt", "ru", "ko"],
+				"titles": [
+					"English",
+					"日本語",
+					"中文 (简体)",
+					"Français",
+					"Deutsch",
+					"Español",
+					"Italiano",
+					"Português",
+					"Русский",
+					"한국어"
+				],
+				"default": ["en"],
+				"refreshes": ["content"]
+			},
+			{
+				"type": "select",
+				"key": "quality",
+				"title": "Page quality",
+				"values": ["low-res", "hi-res"],
+				"titles": ["Low (saves data)", "High"],
+				"default": "low-res"
+			}
+		]
+	}
+]

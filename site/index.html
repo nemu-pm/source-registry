@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>nemu recommended sources</title>
+		<meta
+			name="description"
+			content="The curated source directory that ships with nemu."
+		/>
+		<style>
+			body {
+				font: 16px/1.5 system-ui, sans-serif;
+				max-width: 40rem;
+				margin: 3rem auto;
+				padding: 0 1rem;
+				color: #1d1d1f;
+			}
+			code {
+				background: #f2f2f4;
+				padding: 0.1rem 0.35rem;
+				border-radius: 4px;
+				word-break: break-all;
+			}
+			ul {
+				padding-left: 1.2rem;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>nemu recommended sources</h1>
+		<p>
+			The source directory that ships with
+			<a href="https://nemu.pm">nemu</a>. Every entry is a free work whose
+			licence allows it to be redistributed, with the licence basis,
+			attribution and a pinned checksum recorded in
+			<a href="https://github.com/nemu-pm/source-registry">the repository</a>.
+		</p>
+		<p>
+			Directory address (Aidoku <code>index.min.json</code> format):
+			<br /><code>https://nemu-pm.github.io/source-registry/index.min.json</code>
+		</p>
+		<h2>Sources</h2>
+		<ul id="sources"><li>Loading…</li></ul>
+		<script>
+			fetch("index.min.json")
+				.then((response) => response.json())
+				.then((index) => {
+					const list = document.getElementById("sources");
+					list.textContent = "";
+					for (const source of index.sources) {
+						const item = document.createElement("li");
+						item.textContent = `${source.name} (v${source.version}, ${source.languages.join(", ")})`;
+						list.appendChild(item);
+					}
+				})
+				.catch(() => {
+					document.getElementById("sources").textContent =
+						"The directory could not be loaded.";
+				});
+		</script>
+	</body>
+</html>

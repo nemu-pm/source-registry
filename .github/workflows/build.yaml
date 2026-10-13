@@ -1,0 +1,77 @@
+name: Build and publish source directory
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "sources/**"
+      - "site/**"
+      - "curation/**"
+      - "scripts/**"
+      - "rust-toolchain.toml"
+      - ".github/actions/install-aidoku-cli/**"
+      - ".github/workflows/build.yaml"
+  workflow_dispatch:
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install the pinned Rust toolchain
+        run: rustup toolchain install # reads rust-toolchain.toml
+
+      - name: Cache cargo
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry/index
+            ~/.cargo/registry/cache
+            ~/.cargo/git/db
+            sources/**/target/
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock', 'rust-toolchain.toml') }}
+          restore-keys: ${{ runner.os }}-cargo-
+
+      - uses: ./.github/actions/install-aidoku-cli
+
+      - name: Build and verify packages
+        run: ./scripts/build.sh
+
+      - name: Check the curation records
+        run: ./scripts/check-curation.sh
+
+      - name: Checksums
+        run: |
+          cd public/sources
+          shasum -a 256 *.aix | tee SHA256SUMS
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Keep the packages as a build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: packages
+          path: public/sources/*.aix
+          if-no-files-found: error
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

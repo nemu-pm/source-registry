@@ -1,0 +1,57 @@
+name: Check PR
+
+on:
+  pull_request:
+    paths:
+      - "sources/**"
+      - "site/**"
+      - "curation/**"
+      - "scripts/**"
+      - "rust-toolchain.toml"
+      - ".github/**"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Build, verify, lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install the pinned Rust toolchain
+        run: rustup toolchain install # reads rust-toolchain.toml
+
+      - name: Cache cargo
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry/index
+            ~/.cargo/registry/cache
+            ~/.cargo/git/db
+            sources/**/target/
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock', 'rust-toolchain.toml') }}
+          restore-keys: ${{ runner.os }}-cargo-
+
+      - uses: ./.github/actions/install-aidoku-cli
+
+      - name: Format and Clippy
+        run: |
+          set -euo pipefail
+          for source in sources/*/; do
+            [[ -f "$source/Cargo.toml" ]] || continue
+            (cd "$source" && cargo fmt --check && cargo clippy --target wasm32-unknown-unknown -- -D warnings)
+          done
+
+      - name: Build and verify packages
+        env:
+          RUSTFLAGS: -Dwarnings
+        run: ./scripts/build.sh
+
+      - name: Check the curation records
+        run: ./scripts/check-curation.sh
