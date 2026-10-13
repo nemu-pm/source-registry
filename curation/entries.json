@@ -24,6 +24,31 @@
 				"toolchain": "rustc 1.98.0, aidoku-rs ae6485e3, wasm32-unknown-unknown"
 			},
 			"contentLicense": "CC-BY-4.0"
+		},
+		{
+			"id": "multi.lanraragi",
+			"name": "LANraragi",
+			"sourceLicence": "MIT OR Apache-2.0 (Aidoku-Community/sources, vendored unmodified apart from pinning the aidoku-rs rev in Cargo.toml/Cargo.lock to ae6485e3, the rev the lockfile already used)",
+			"upstream": {
+				"repository": "https://github.com/Aidoku-Community/sources",
+				"path": "sources/multi.lanraragi",
+				"commit": "4f8922e1c939285ce6687e4af225d22d0deec093",
+				"committedAt": "2026-10-13"
+			},
+			"content": {
+				"work": "None. The source lists nothing of its own: it connects to a LANraragi server that the user runs and enters as baseUrl.",
+				"licensor": "Not applicable",
+				"basis": "It only talks to the user's own server through the official LANraragi client API (https://sugoi.gitbook.io/lanraragi/api-documentation/getting-started). The archives are the user's own files; nothing is hosted, proxied or indexed by nemu or this directory.",
+				"note": "No contentLicense field: there is no content to license. Verified 2026-10-13."
+			},
+			"dataSource": "The user's own LANraragi server (baseUrl setting), via its client API",
+			"verifiedAt": "2026-10-13",
+			"version": 4,
+			"package": {
+				"file": "multi.lanraragi-v4.aix",
+				"payloadSha256": "269f3c7c069375497dee319269b248dc7614d99f58fff7be3bb78757680fe149",
+				"toolchain": "rustc 1.98.0, aidoku-rs ae6485e3, wasm32-unknown-unknown"
+			}
 		}
 	]
 }
