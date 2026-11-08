@@ -42,10 +42,10 @@
 			"attribution": "Mini Fantasy Theater by David Revoy, https://www.peppercarrot.com/en/webcomics/miniFantasyTheater.html, CC BY-SA 4.0, AI derivation prohibited. Art, scenario, translation, proofreading and contribution credits are shown per episode on each chapter's last page.",
 			"dataSource": "https://www.peppercarrot.com/<lang>/webcomics/miniFantasyTheater.html (episode list, one page per language), https://www.peppercarrot.com/0_sources/miniFantasyTheater/.<NNN>.json and lang/<lang>/<NNN>_info.json (credits); images from the same 0_sources tree",
 			"verifiedAt": "2026-11-08",
-			"version": 1,
+			"version": 2,
 			"package": {
-				"file": "multi.minifantasytheater-v1.aix",
-				"payloadSha256": "5f65230ff5b5c0d1456b1f96a1f6828adfab24c0c0bb9c9774b3453ed96600ee",
+				"file": "multi.minifantasytheater-v2.aix",
+				"payloadSha256": "PENDING-take-from-check-curation-in-CI",
 				"toolchain": "rustc 1.98.0, aidoku-rs ae6485e3, wasm32-unknown-unknown"
 			},
 			"contentLicense": "CC-BY-SA-4.0",
