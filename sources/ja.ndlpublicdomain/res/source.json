@@ -1,0 +1,10 @@
+{
+	"info": {
+		"id": "ja.ndlpublicdomain",
+		"name": "NDL Public Domain Picks",
+		"version": 1,
+		"url": "https://dl.ndl.go.jp",
+		"contentRating": 0,
+		"languages": ["ja"]
+	}
+}

@@ -6,24 +6,28 @@ The recommended source directory built into [nemu](https://nemu.pm).
 https://nemu-pm.github.io/source-registry/index.min.json
 ```
 
-Only works whose rights holder publishes them under a free licence are listed, plus sources that only reach a server you run. Details for each entry are in [`curation/entries.json`](curation/entries.json).
+Only works whose rights holder publishes them under a free licence and works in the public domain are listed, plus sources that only reach a server you run. Details for each entry are in [`curation/entries.json`](curation/entries.json).
 
 ## Sources
 
 | Source | Languages | Licence | Author |
 | --- | --- | --- | --- |
 | Pepper&Carrot (`multi.peppercarrot`) | en, ja, zh, fr, de, es, it, pt, ru, ko | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | [David Revoy](https://www.peppercarrot.com) |
+| NDL Public Domain Picks (`ja.ndlpublicdomain`) | ja | [Public domain](https://www.ndl.go.jp/en/use/reproduction/index.html) | Seven works; scans by the [National Diet Library, Japan](https://dl.ndl.go.jp) |
+| Little Nemo in Slumberland (`en.littlenemo`) | en | [Public domain](https://commons.wikimedia.org/wiki/Category:Little_Nemo_in_Slumberland) | Winsor McCay; scans from Wikimedia Commons |
 | LANraragi (`multi.lanraragi`) | multi | — (your own server) | [LANraragi](https://github.com/Difegue/LANraragi) / [Aidoku Community](https://github.com/Aidoku-Community/sources) |
 
 LANraragi has no content of its own; it connects to a server you run.
 
 Pepper&Carrot reads the site's official [API](https://www.peppercarrot.com/ld/documentation/130_API.html). Translators are credited on each chapter. The author's [2026-10-08 note](https://www.davidrevoy.com/article1178/license-update-ai-derivation-prohibited-on-all-my-art-lore-stories-and-comics) prohibits AI-generated derivatives; nemu doesn't make any. We'll remove the entry if he asks.
 
+NDL Public Domain Picks reads a short hand-picked list through NDL's [IIIF API](https://dl.ndl.go.jp/ja/help_iiif), which only serves items NDL marks as out of copyright. Those images may be reused without asking; NDL asks to be credited, and is on every chapter. Little Nemo reads its files through the [Commons API](https://www.mediawiki.org/wiki/API:Main_page). Both sources ask again when a chapter is opened and show nothing that has lost its public-domain status. `scripts/check-public-domain.py` runs the same checks over every listed work; run it before a release. Neither source is affiliated with NDL or the Wikimedia Foundation.
+
 ## Adding a source
 
 Requirements:
 
-- The rights holder states a free licence (or public domain) for the work. Record the URL.
+- The rights holder states a free licence (or public domain) for the work. Record the URL. For public domain, check it outside the publishing country too: the author's death date and the publication date.
 - Use the official feed or API. No login, no scraping around access controls.
 - Write down the attribution the licence requires; it's shown in the app.
 

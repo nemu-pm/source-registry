@@ -49,6 +49,149 @@
 				"payloadSha256": "269f3c7c069375497dee319269b248dc7614d99f58fff7be3bb78757680fe149",
 				"toolchain": "rustc 1.98.0, aidoku-rs ae6485e3, wasm32-unknown-unknown"
 			}
+		},
+		{
+			"id": "ja.ndlpublicdomain",
+			"name": "NDL Public Domain Picks",
+			"sourceLicence": "MIT OR Apache-2.0 (the Rust source in this repository)",
+			"content": {
+				"work": "Seven works picked by hand from the National Diet Library Digital Collections; the list is sources/ja.ndlpublicdomain/src/works.json. Nothing else in NDL's collection is reachable through the source.",
+				"licensor": "Not applicable: the works are out of copyright. Scans by the National Diet Library, Japan.",
+				"licence": "Public-Domain",
+				"licenceUrl": "https://www.ndl.go.jp/en/use/reproduction/index.html",
+				"basis": "NDL's reuse page says content marked インターネット公開（保護期間満了）\"is in the public domain and may be reused freely\" with no application (https://www.ndl.go.jp/en/use/reproduction/index.html). NDL's IIIF help, which each manifest's license field links to, says the IIIF API only serves such items and that its images \"may be reproduced or repurposed without permission from the NDL\" (https://dl.ndl.go.jp/ja/help_iiif#api-%E3%81%AE%E5%88%A9%E7%94%A8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6). NDL decides this status under Japanese law, so each work here was also checked for worldwide status: every creator died in or before 1920, and every work was published before 1931.",
+				"restrictions": "NDL asks reusers to credit it and to consider moral rights, human rights and privacy, and leaves responsibility for reuse with the reuser (section 3 of the reuse page). NDL asks that the status of each image be checked; the source reads each volume's manifest when it is opened and shows nothing unless it still says PDM.",
+				"note": "The source does not call the NDL Search API, whose metadata terms ask commercial users to apply (https://ndlsearch.ndl.go.jp/en/help/api). Checked with scripts/check-public-domain.py. Verified 2026-11-08.",
+				"works": [
+					{
+						"title": "武蔵百景 Musashi Hyakkei",
+						"creator": "小林清親 Kobayashi Kiyochika",
+						"creatorDied": 1915,
+						"published": "1884",
+						"url": "https://dl.ndl.go.jp/pid/2542756",
+						"volumePids": [
+							"2542756"
+						],
+						"status": "Access Restrictions: PDM in each volume's IIIF manifest; インターネット公開（保護期間満了）"
+					},
+					{
+						"title": "江戸生艶気樺焼 Edo Umare Uwaki no Kabayaki",
+						"creator": "山東京伝 Santō Kyōden (北尾政演)",
+						"creatorDied": 1816,
+						"published": "1785",
+						"url": "https://dl.ndl.go.jp/pid/9892607",
+						"volumePids": [
+							"9892607"
+						],
+						"status": "Access Restrictions: PDM in each volume's IIIF manifest; インターネット公開（保護期間満了）"
+					},
+					{
+						"title": "富岳百景 Fugaku Hyakkei",
+						"creator": "葛飾北斎 Katsushika Hokusai",
+						"creatorDied": 1849,
+						"published": "1834-1835",
+						"url": "https://dl.ndl.go.jp/pid/8942997",
+						"volumePids": [
+							"8942997",
+							"8942998",
+							"8942999"
+						],
+						"status": "Access Restrictions: PDM in each volume's IIIF manifest; インターネット公開（保護期間満了）"
+					},
+					{
+						"title": "北斎漫画 Hokusai Manga",
+						"creator": "葛飾北斎 Katsushika Hokusai",
+						"creatorDied": 1849,
+						"published": "1814-1878; this edition 1878",
+						"url": "https://dl.ndl.go.jp/pid/851646",
+						"volumePids": [
+							"851646",
+							"851647",
+							"851648",
+							"851649",
+							"851650",
+							"851651",
+							"851652",
+							"851653",
+							"851654",
+							"851655",
+							"851656",
+							"851657",
+							"851658",
+							"851659",
+							"851660"
+						],
+						"status": "Access Restrictions: PDM in each volume's IIIF manifest; インターネット公開（保護期間満了）"
+					},
+					{
+						"title": "文鳳麁画 Bunpō Soga",
+						"creator": "河村文鳳 Kawamura Bunpō",
+						"creatorDied": 1821,
+						"published": "1800",
+						"url": "https://dl.ndl.go.jp/pid/2538771",
+						"volumePids": [
+							"2538771"
+						],
+						"status": "Access Restrictions: PDM in each volume's IIIF manifest; インターネット公開（保護期間満了）"
+					},
+					{
+						"title": "絵本水や空 Ehon Mizu ya Sora",
+						"creator": "耳鳥斎 Nichōsai",
+						"creatorDied": 1803,
+						"published": "1780",
+						"url": "https://dl.ndl.go.jp/pid/2537568",
+						"volumePids": [
+							"2537568"
+						],
+						"status": "Access Restrictions: PDM in each volume's IIIF manifest; インターネット公開（保護期間満了）"
+					},
+					{
+						"title": "富士百勝景 前集 Fuji Hyaku Shōkei",
+						"creator": "尾形月耕 Ogata Gekkō",
+						"creatorDied": 1920,
+						"published": "1907",
+						"url": "https://dl.ndl.go.jp/pid/12118900",
+						"volumePids": [
+							"12118900"
+						],
+						"status": "Access Restrictions: PDM in each volume's IIIF manifest; インターネット公開（保護期間満了）"
+					}
+				]
+			},
+			"attribution": "Scans: 国立国会図書館 National Diet Library, Japan (NDL Digital Collections), credited on each work and chapter. Not affiliated with NDL.",
+			"dataSource": "NDL Digital Collections IIIF Presentation and Image APIs (https://dl.ndl.go.jp/api/iiif/<pid>/manifest.json), documented at https://dl.ndl.go.jp/ja/help_iiif",
+			"verifiedAt": "2026-11-08",
+			"version": 1,
+			"package": {
+				"file": "ja.ndlpublicdomain-v1.aix",
+				"payloadSha256": "PENDING-take-from-check-curation-in-CI",
+				"toolchain": "rustc 1.98.0, aidoku-rs ae6485e3, wasm32-unknown-unknown"
+			},
+			"contentLicense": "Public-Domain"
+		},
+		{
+			"id": "en.littlenemo",
+			"name": "Little Nemo in Slumberland",
+			"sourceLicence": "MIT OR Apache-2.0 (the Rust source in this repository)",
+			"content": {
+				"work": "Little Nemo in Slumberland by Winsor McCay, 261 dated Sunday strips from 1905-1911; the list is sources/en.littlenemo/src/strips.tsv, taken from the Wikimedia Commons categories 'Little Nemo in Slumberland, <year>'.",
+				"licensor": "Not applicable: the work is out of copyright. Scans by Wikimedia Commons contributors.",
+				"licence": "Public-Domain",
+				"licenceUrl": "https://commons.wikimedia.org/wiki/Category:Little_Nemo_in_Slumberland",
+				"basis": "McCay died in 1934, so the strips are out of copyright in life+70 countries, and they were published before 1931, so they are out of copyright in the US. Each listed file was checked through the Commons API: extmetadata License=pd, Copyrighted=False, and a PD-* licence template in its wikitext. Each file's evidence is on its own Commons page.",
+				"restrictions": "None from copyright. The source re-reads each file's License when a chapter is opened and drops any that is no longer pd. Requests carry the User-Agent that Wikimedia's policy asks for (https://foundation.wikimedia.org/wiki/Policy:Wikimedia_Foundation_User-Agent_Policy) and ask for a standard thumbnail width.",
+				"note": "Some strips contain racist caricatures of the period, including the character Imp; the work's description says so. Not every week is on Commons: the list has 48 strips for 1906, 15 for 1910 and 30 for 1911. 1905-12-03 is only a 700 px scan. Checked with scripts/check-public-domain.py. Verified 2026-11-08."
+			},
+			"attribution": "Little Nemo in Slumberland by Winsor McCay. Scans from Wikimedia Commons, https://commons.wikimedia.org/wiki/Category:Little_Nemo_in_Slumberland. Not affiliated with the Wikimedia Foundation.",
+			"dataSource": "Wikimedia Commons Action API (https://commons.wikimedia.org/w/api.php, prop=imageinfo); images from Wikimedia's upload servers",
+			"verifiedAt": "2026-11-08",
+			"version": 1,
+			"package": {
+				"file": "en.littlenemo-v1.aix",
+				"payloadSha256": "PENDING-take-from-check-curation-in-CI",
+				"toolchain": "rustc 1.98.0, aidoku-rs ae6485e3, wasm32-unknown-unknown"
+			},
+			"contentLicense": "Public-Domain"
 		}
 	]
 }

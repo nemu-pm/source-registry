@@ -1,0 +1,284 @@
+[
+	{
+		"key": "musashi-hyakkei",
+		"title": "武蔵百景 Musashi Hyakkei",
+		"authors": [
+			"小林清親 Kobayashi Kiyochika"
+		],
+		"year": "1884 (明治17)",
+		"description": "小林清親による武蔵国の名所を描いた多色摺の錦絵集。\nOne Hundred Views of Musashi: colour woodblock prints of the sights around Tokyo by Kobayashi Kiyochika (1847-1915).",
+		"tags": [
+			"Woodblock print",
+			"Landscape",
+			"Colour"
+		],
+		"cover": {
+			"pid": "2542756",
+			"frame": 3,
+			"region": "820,350,4648,6130"
+		},
+		"crop": {
+			"left": 0.0,
+			"top": 0.0,
+			"right": 1.0,
+			"bottom": 0.9
+		},
+		"skip_start": 1,
+		"skip_end": 1,
+		"volumes": [
+			{
+				"pid": "2542756",
+				"title": "全"
+			}
+		]
+	},
+	{
+		"key": "edo-umare-uwaki-no-kabayaki",
+		"title": "江戸生艶気樺焼 Edo Umare Uwaki no Kabayaki",
+		"authors": [
+			"山東京伝 Santō Kyōden (北尾政演 Kitao Masanobu)"
+		],
+		"year": "1785 (天明5)",
+		"description": "山東京伝の代表作の黄表紙。うぬぼれ屋の艶二郎が浮き名を流そうと奔走する滑稽譚。絵と文が同じ頁に並ぶ江戸の絵物語。\nA kibyōshi, the Edo comic book with text and picture on one page: vain young Enjirō goes to absurd lengths to win a reputation as a great lover. Written and drawn by Santō Kyōden (1761-1816), published by Tsutaya Jūzaburō.",
+		"tags": [
+			"Kibyōshi",
+			"Comedy",
+			"Edo"
+		],
+		"cover": {
+			"pid": "9892607",
+			"frame": 10,
+			"region": "2750,240,1890,2800"
+		},
+		"crop": {
+			"left": 0.155,
+			"top": 0.03,
+			"right": 0.925,
+			"bottom": 0.92
+		},
+		"skip_start": 1,
+		"skip_end": 1,
+		"volumes": [
+			{
+				"pid": "9892607",
+				"title": "全3巻"
+			}
+		]
+	},
+	{
+		"key": "fugaku-hyakkei",
+		"title": "富岳百景 Fugaku Hyakkei",
+		"authors": [
+			"葛飾北斎 Katsushika Hokusai"
+		],
+		"year": "1834-1835 (天保5-6 序)",
+		"description": "葛飾北斎晩年の絵本。さまざまな場所と暮らしの中に富士を描く全三冊。\nOne Hundred Views of Mount Fuji: Hokusai's late picture book in three parts, finding Fuji in every kind of place and everyday scene.",
+		"tags": [
+			"Ehon",
+			"Landscape",
+			"Hokusai"
+		],
+		"cover": {
+			"pid": "8942997",
+			"frame": 5,
+			"region": "3330,250,2350,3700"
+		},
+		"crop": {
+			"left": 0.13,
+			"top": 0.02,
+			"right": 0.94,
+			"bottom": 0.915
+		},
+		"skip_start": 1,
+		"skip_end": 1,
+		"volumes": [
+			{
+				"pid": "8942997",
+				"title": "第1冊"
+			},
+			{
+				"pid": "8942998",
+				"title": "第2冊"
+			},
+			{
+				"pid": "8942999",
+				"title": "第3冊"
+			}
+		]
+	},
+	{
+		"key": "hokusai-manga",
+		"title": "北斎漫画 Hokusai Manga",
+		"authors": [
+			"葛飾北斎 Katsushika Hokusai"
+		],
+		"year": "1814-1878 (this edition 1878, 片野東四郎)",
+		"description": "葛飾北斎の絵手本。人々の暮らし、動物、妖怪、風景まであらゆるものを描いた全15編。片野東四郎版の白黒スキャン。\nHokusai's sketchbooks in fifteen volumes: people at work and play, animals, ghosts and landscapes, drawn as a model book for students. These are high-contrast black and white scans of the edition published by Katano Tōshirō.",
+		"tags": [
+			"Sketchbook",
+			"Hokusai",
+			"Edo"
+		],
+		"cover": {
+			"pid": "851646",
+			"frame": 8,
+			"region": "1860,690,1400,2060"
+		},
+		"volumes": [
+			{
+				"pid": "851646",
+				"title": "第1編"
+			},
+			{
+				"pid": "851647",
+				"title": "第2編"
+			},
+			{
+				"pid": "851648",
+				"title": "第3編"
+			},
+			{
+				"pid": "851649",
+				"title": "第4編"
+			},
+			{
+				"pid": "851650",
+				"title": "第5編"
+			},
+			{
+				"pid": "851651",
+				"title": "第6編"
+			},
+			{
+				"pid": "851652",
+				"title": "第7編"
+			},
+			{
+				"pid": "851653",
+				"title": "第8編"
+			},
+			{
+				"pid": "851654",
+				"title": "第9編"
+			},
+			{
+				"pid": "851655",
+				"title": "第10編"
+			},
+			{
+				"pid": "851656",
+				"title": "第11編"
+			},
+			{
+				"pid": "851657",
+				"title": "第12編"
+			},
+			{
+				"pid": "851658",
+				"title": "第13編"
+			},
+			{
+				"pid": "851659",
+				"title": "第14編"
+			},
+			{
+				"pid": "851660",
+				"title": "第15編"
+			}
+		]
+	},
+	{
+		"key": "bunpo-soga",
+		"title": "文鳳麁画 Bunpō Soga",
+		"authors": [
+			"河村文鳳 Kawamura Bunpō"
+		],
+		"year": "1800 (寛政12)",
+		"description": "河村文鳳の略画集。市井の人々を淡彩で軽やかに描く。\nQuick, lightly coloured sketches of ordinary people, by the Kyoto painter Kawamura Bunpō.",
+		"tags": [
+			"Ehon",
+			"Sketchbook",
+			"Colour"
+		],
+		"cover": {
+			"pid": "2538771",
+			"frame": 6,
+			"region": "2860,200,2420,3950"
+		},
+		"crop": {
+			"left": 0.06,
+			"top": 0.02,
+			"right": 0.905,
+			"bottom": 0.82
+		},
+		"split": true,
+		"skip_start": 1,
+		"skip_end": 1,
+		"volumes": [
+			{
+				"pid": "2538771",
+				"title": "全"
+			}
+		]
+	},
+	{
+		"key": "ehon-mizu-ya-sora",
+		"title": "絵本水や空 Ehon Mizu ya Sora",
+		"authors": [
+			"耳鳥斎 Nichōsai"
+		],
+		"year": "1780 (安永9)",
+		"description": "大坂の画家耳鳥斎による役者の戯画集。のびやかな線で歌舞伎役者をおどけた姿に描く。\nCaricatures of kabuki actors in a loose, playful line, by the Osaka painter Nichōsai.",
+		"tags": [
+			"Ehon",
+			"Caricature",
+			"Kabuki"
+		],
+		"cover": {
+			"pid": "2537568",
+			"frame": 6,
+			"region": "2990,250,2460,4070"
+		},
+		"crop": {
+			"left": 0.08,
+			"top": 0.02,
+			"right": 0.93,
+			"bottom": 0.85
+		},
+		"split": true,
+		"skip_start": 1,
+		"skip_end": 1,
+		"volumes": [
+			{
+				"pid": "2537568",
+				"title": "全"
+			}
+		]
+	},
+	{
+		"key": "fuji-hyakushokei",
+		"title": "富士百勝景 Fuji Hyaku Shōkei",
+		"authors": [
+			"尾形月耕 Ogata Gekkō"
+		],
+		"year": "1907 (明治40)",
+		"description": "尾形月耕による多色摺の富士図集（前集）。\nOne Hundred Fine Views of Mount Fuji, first collection: colour woodblock prints by Ogata Gekkō (1859-1920).",
+		"tags": [
+			"Woodblock print",
+			"Landscape",
+			"Colour"
+		],
+		"cover": {
+			"pid": "12118900",
+			"frame": 12,
+			"region": "2000,600,2400,3150"
+		},
+		"volumes": [
+			{
+				"pid": "12118900",
+				"title": "前集"
+			}
+		],
+		"skip_end": 1
+	}
+]
