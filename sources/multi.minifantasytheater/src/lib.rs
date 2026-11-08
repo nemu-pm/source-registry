@@ -170,10 +170,14 @@ fn credits_page(chapter: &Chapter, episode: &str, code: &str) -> String {
 		"{STRIPS}/lang/{code}/{episode}_info.json"
 	)));
 
-	let mut lines = vec![format!(
-		"**{}**",
-		chapter.title.as_deref().unwrap_or("Mini Fantasy Theater")
-	)];
+	// Plain text: not every reader renders a text page's markdown.
+	let mut lines = vec![
+		chapter
+			.title
+			.as_deref()
+			.unwrap_or("Mini Fantasy Theater")
+			.to_string(),
+	];
 	for (key, label) in ROLES {
 		let names: Vec<&str> = credits
 			.get(key)
