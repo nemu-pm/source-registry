@@ -37,6 +37,14 @@ Steps:
 2. Add or update its record in `curation/entries.json`, including `payloadSha256` (printed by `scripts/check-curation.sh` in CI).
 3. Open a PR. Merging to `main` publishes.
 
+## One-tap add links
+
+A directory's site can link `nemu://addSourceList?url=<index URL, percent-encoded>`; nemu shows the address and asks before adding it. nemu also accepts Aidoku's `aidoku://addSourceList?url=…` and `https://aidoku.app/add-source-list/?url=…`. This directory:
+
+```
+nemu://addSourceList?url=https%3A%2F%2Fnemu-pm.github.io%2Fsource-registry%2Findex.min.json
+```
+
 ## Building locally
 
 ```sh
