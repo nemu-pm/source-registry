@@ -163,7 +163,7 @@ fn display_name(credit: &str) -> &str {
 }
 
 /// The chapter's last page: the attribution CC BY-SA asks for, translators
-/// included. The strip itself only names the artist.
+/// included, which the art leaves out.
 fn credits_page(chapter: &Chapter, episode: &str, code: &str) -> String {
 	let mut credits = fetch_credits(format!("{STRIPS}/.{episode}.json"));
 	credits.extend(fetch_credits(format!(
@@ -195,7 +195,9 @@ fn credits_page(chapter: &Chapter, episode: &str, code: &str) -> String {
 	}
 	lines.push(format!("Licence: {LICENCE_NOTICE}"));
 	lines.push(episode_url(code, episode));
-	lines.join("\n\n")
+	// One line each: the reader's text card has a fixed height and clips what
+	// does not fit.
+	lines.join("\n")
 }
 
 fn series() -> Manga {
