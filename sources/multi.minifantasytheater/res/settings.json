@@ -1,0 +1,36 @@
+[
+	{
+		"type": "group",
+		"title": "Reading",
+		"footer": "Mini Fantasy Theater is translated by its community, and some languages have only part of the series. Pick the ones whose episodes should be listed. High quality pages are 3840 px (about 5 MB each); low quality pages are 1280 px.",
+		"items": [
+			{
+				"type": "multi-select",
+				"key": "languages",
+				"title": "Languages",
+				"values": ["en", "ja", "fr", "es", "de", "ca", "nn", "sl", "tok"],
+				"titles": [
+					"English",
+					"日本語",
+					"Français",
+					"Español",
+					"Deutsch",
+					"Català",
+					"Norsk (nynorsk)",
+					"Slovenščina",
+					"toki pona"
+				],
+				"default": ["en"],
+				"refreshes": ["content"]
+			},
+			{
+				"type": "select",
+				"key": "quality",
+				"title": "Page quality",
+				"values": ["hi-res", "low-res"],
+				"titles": ["High", "Low (saves data)"],
+				"default": "hi-res"
+			}
+		]
+	}
+]

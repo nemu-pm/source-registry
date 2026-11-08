@@ -1,5 +1,5 @@
 {
-	"$comment": "One record per source in this directory. scripts/check-curation.sh fails CI when a built package differs from its record. payloadSha256 is the SHA-256 of Payload/main.wasm inside the .aix (the zip itself embeds build timestamps, so its hash is not stable). contentLicense (SPDX-style) is copied into the published index entry by scripts/build.sh; Aidoku parsers ignore unknown fields.",
+	"$comment": "One record per source in this directory. scripts/check-curation.sh fails CI when a built package differs from its record. payloadSha256 is the SHA-256 of Payload/main.wasm inside the .aix (the zip itself embeds build timestamps, so its hash is not stable). contentLicense (SPDX-style) and contentLicenseNote (a condition SPDX has no identifier for, such as the author's AI clause) are copied into the published index entry by scripts/build.sh; Aidoku parsers ignore unknown fields.",
 	"entries": [
 		{
 			"id": "multi.peppercarrot",
@@ -10,20 +10,46 @@
 				"licensor": "David Revoy",
 				"licence": "CC-BY-4.0",
 				"licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
-				"basis": "The author's licence page states that comics, translations and artworks are licensed under Creative Commons Attribution 4.0 International, and the official API documentation offers the episode images for reuse under CC BY (https://www.peppercarrot.com/en/license/index.html, https://www.peppercarrot.com/ld/documentation/130_API.html). Not covered: the separate MiniFantasyTheater strips (CC BY-SA 4.0) and fan-art, neither of which the source lists.",
-				"restrictions": "The author's licence notice states 'AI derivation prohibited'. The source only reads the episodes; it does not train or derive anything.",
-				"note": "CC BY 4.0, shown unmodified with per-language attribution. On 2026-10-08 the author published a statement (https://www.davidrevoy.com/article1178/license-update-ai-derivation-prohibited-on-all-my-art-lore-stories-and-comics) prohibiting AI-generated derivative works while tolerating AI for grammar, proofreading and translation. nemu never generates derivatives; its learning features (OCR, explanation) are reading aids the user starts. The entry is removed if the author objects. Verified 2026-10-12."
+				"basis": "The author's licence page states that comics, translations and artworks are licensed under Creative Commons Attribution 4.0 International, and the official API documentation offers the episode images for reuse under CC BY (https://www.peppercarrot.com/en/license/index.html, https://www.peppercarrot.com/ld/documentation/130_API.html). Not covered: the MiniFantasyTheater strips (CC BY-SA 4.0, their own entry below) and fan-art.",
+				"restrictions": "AI derivation prohibited: the site's licence notice (https://www.peppercarrot.com/en/about/index.html#license) has carried this line under the CC BY 4.0 grant since the author's 2026-10-08 statement. It is the author's assertion of moral rights on top of the licence, which Creative Commons has no term for. The source only reads the episodes; it does not train or derive anything.",
+				"note": "CC BY 4.0, shown unmodified with per-language attribution. The author's statement (https://www.davidrevoy.com/article1178/license-update-ai-derivation-prohibited-on-all-my-art-lore-stories-and-comics) prohibits AI-generated derivative works while tolerating AI for grammar, proofreading and translation; its 2026-10-18 update accepts that works released before 2026-10-08 remain plain CC, and says the notice is being backported, so the site's episode pages do not all show it yet. nemu never generates derivatives; its learning features (OCR, explanation) are reading aids the user starts. The entry is removed if the author objects. Verified 2026-11-08."
 			},
 			"attribution": "Pepper&Carrot by David Revoy, https://www.peppercarrot.com, CC BY 4.0. Translators are credited per language (chapter scanlators) and on each episode's credits page.",
 			"dataSource": "https://www.peppercarrot.com/0_sources/episodes.json (episode list) and https://www.peppercarrot.com/0_sources/langs.json (translator credits); images from the same 0_sources tree",
-			"verifiedAt": "2026-10-12",
+			"verifiedAt": "2026-11-08",
 			"version": 1,
 			"package": {
 				"file": "multi.peppercarrot-v1.aix",
 				"payloadSha256": "0c18d365a0dd07b777dc875278c2f7da28498b922631de34b9ae7364b374353c",
 				"toolchain": "rustc 1.98.0, aidoku-rs ae6485e3, wasm32-unknown-unknown"
 			},
-			"contentLicense": "CC-BY-4.0"
+			"contentLicense": "CC-BY-4.0",
+			"contentLicenseNote": "AI derivation prohibited"
+		},
+		{
+			"id": "multi.minifantasytheater",
+			"name": "Mini Fantasy Theater",
+			"sourceLicence": "MIT OR Apache-2.0 (the Rust source in this repository)",
+			"content": {
+				"work": "Mini Fantasy Theater (MiniFantasyTheater) webcomic strips, episodes 1-77 at the time of checking and whatever the site's series page lists after that; the source has no list of its own.",
+				"licensor": "David Revoy",
+				"licence": "CC-BY-SA-4.0",
+				"licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+				"basis": "The author's licence notice states that the comic strips 'MiniFantasyTheater' are licensed under Creative Commons Attribution Share-Alike 4.0 International (https://www.peppercarrot.com/en/about/index.html#license); each episode page repeats it, and the series README in the strips' own directory says the same (https://www.peppercarrot.com/0_sources/miniFantasyTheater/README.md).",
+				"restrictions": "AI derivation prohibited: the licence notice carries this line, and every episode page repeats it beside the licence. It is the author's assertion of moral rights on top of the licence, which Creative Commons has no term for. The source only reads the episodes; it does not train or derive anything. ShareAlike applies to adaptations; the strips are shown unmodified. The source icon is a scaled crop of the art of episode 28, under the same licence.",
+				"note": "Each chapter ends on a credits page built from the site's own credit files, because the credits vary by episode (one episode has a different scenario writer) and translators are not named on the strip. Languages are those with rendered pages: 77 episodes in en and fr, 76 in es, nn and sl, 46 in toki pona, 35 in ja, 10 in ca and de. The site's own series page is the episode list; episodes.json and the documented API only cover Pepper&Carrot, and the source does not parse directory listings. Pages default to the site's hi-res directory (3840 px); low-res (1280 px) is a setting. The author's statement is the one recorded for Pepper&Carrot; the entry is removed if the author objects. Verified 2026-11-08."
+			},
+			"attribution": "Mini Fantasy Theater by David Revoy, https://www.peppercarrot.com/en/webcomics/miniFantasyTheater.html, CC BY-SA 4.0, AI derivation prohibited. Art, scenario, translation, proofreading and contribution credits are shown per episode on each chapter's last page.",
+			"dataSource": "https://www.peppercarrot.com/<lang>/webcomics/miniFantasyTheater.html (episode list, one page per language), https://www.peppercarrot.com/0_sources/miniFantasyTheater/.<NNN>.json and lang/<lang>/<NNN>_info.json (credits); images from the same 0_sources tree",
+			"verifiedAt": "2026-11-08",
+			"version": 1,
+			"package": {
+				"file": "multi.minifantasytheater-v1.aix",
+				"payloadSha256": "PENDING-take-from-check-curation-in-CI",
+				"toolchain": "rustc 1.98.0, aidoku-rs ae6485e3, wasm32-unknown-unknown"
+			},
+			"contentLicense": "CC-BY-SA-4.0",
+			"contentLicenseNote": "AI derivation prohibited"
 		},
 		{
 			"id": "multi.lanraragi",
