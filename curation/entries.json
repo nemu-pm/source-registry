@@ -45,7 +45,7 @@
 			"version": 1,
 			"package": {
 				"file": "multi.minifantasytheater-v1.aix",
-				"payloadSha256": "PENDING-take-from-check-curation-in-CI",
+				"payloadSha256": "5f65230ff5b5c0d1456b1f96a1f6828adfab24c0c0bb9c9774b3453ed96600ee",
 				"toolchain": "rustc 1.98.0, aidoku-rs ae6485e3, wasm32-unknown-unknown"
 			},
 			"contentLicense": "CC-BY-SA-4.0",
@@ -190,7 +190,7 @@
 			"version": 1,
 			"package": {
 				"file": "ja.ndlpublicdomain-v1.aix",
-				"payloadSha256": "PENDING-take-from-check-curation-in-CI",
+				"payloadSha256": "9c43f8fbdf43d7f664937802fa6001443cc4e1b4a74dbb0790e24dc4db080f4d",
 				"toolchain": "rustc 1.98.0, aidoku-rs ae6485e3, wasm32-unknown-unknown"
 			},
 			"contentLicense": "Public-Domain"
@@ -214,7 +214,7 @@
 			"version": 1,
 			"package": {
 				"file": "en.littlenemo-v1.aix",
-				"payloadSha256": "PENDING-take-from-check-curation-in-CI",
+				"payloadSha256": "dc992ff1e9cab025891b2a18ad43389f49c2e630acded965fd7056564a83a6ef",
 				"toolchain": "rustc 1.98.0, aidoku-rs ae6485e3, wasm32-unknown-unknown"
 			},
 			"contentLicense": "Public-Domain"
