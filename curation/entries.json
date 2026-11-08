@@ -45,7 +45,7 @@
 			"version": 2,
 			"package": {
 				"file": "multi.minifantasytheater-v2.aix",
-				"payloadSha256": "PENDING-take-from-check-curation-in-CI",
+				"payloadSha256": "c960cc8fd9807bb144589d06b1d03e9b188638ca6f158ab0d12c00a9fb50f3ee",
 				"toolchain": "rustc 1.98.0, aidoku-rs ae6485e3, wasm32-unknown-unknown"
 			},
 			"contentLicense": "CC-BY-SA-4.0",
