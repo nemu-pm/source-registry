@@ -14,7 +14,7 @@ for source in sources/*; do
 done
 
 aidoku verify sources/*/package.aix
-aidoku build sources/*/package.aix --name "nemu recommended"
+aidoku build sources/*/package.aix --name "nemu example sources"
 # Copy each entry's contentLicense and contentLicenseNote (curation/entries.json)
 # into the index. They are extra fields: Aidoku parsers that do not know them
 # ignore them.

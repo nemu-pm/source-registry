@@ -1,6 +1,6 @@
-# nemu source registry
+# nemu example sources
 
-The recommended source directory built into [nemu](https://nemu.pm).
+The example source directory built into [nemu](https://nemu.pm).
 
 ```
 https://nemu-pm.github.io/source-registry/index.min.json
